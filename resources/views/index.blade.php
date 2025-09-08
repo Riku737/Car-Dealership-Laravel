@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="{{ asset('/bootstrap-5.3.8-dist/css/bootstrap.css') }}" rel="stylesheet">
-    <script src="{{ asset('/bootstrap-5.3.8-dist/js/bootstrap.js') }}" defer></script>
-</head>
-<body>
+@extends('layouts.public.layout')
+
+@section('content')
+    
     <div class="container-lg">
 
         <div class="row row-cols-3 g-4">
@@ -21,7 +15,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $car->name }}</h5>
                         <p class="card-text">{{ $car->description }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">View Vehicle</a>
                     </div>
                 </div>
             </div>
@@ -30,6 +24,5 @@
         </div>
 
     </div>
-   
-</body>
-</html>
+
+@endsection
